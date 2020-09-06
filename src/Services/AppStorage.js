@@ -1,0 +1,36 @@
+
+    var storeToken = (token) =>{
+        return localStorage.setItem('token', token)
+    }
+
+    var storeUser = (user) =>{
+        return localStorage.setItem('user', user)
+    }
+
+    var store = (user, token) =>{
+        storeToken(token)
+        storeUser(user)
+        
+    }
+
+    var clear = () => {
+        localStorage.removeItem('token')
+        localStorage.removeItem('user')
+    }
+
+    var getToken = () =>{
+        return localStorage.getItem('token')
+    }
+
+    var getUser = () =>{
+        return localStorage.getItem('user')
+    }
+
+export {
+    storeToken,
+    storeUser,
+    store,
+    clear,
+    getToken,
+    getUser
+}
